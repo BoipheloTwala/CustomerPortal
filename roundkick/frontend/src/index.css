@@ -1,0 +1,58 @@
+/*CODE ATTRIBUTION*/
+/*01*/
+/*Tailwind CSS Framework Directives*/
+/*Adapted from: Tailwind Labs. (2025). Installation. [online] Tailwind CSS Documentation.*/
+/*Available at: https://tailwindcss.com/docs/installation*/
+/*Date Accessed: 10 October 2025*/
+
+@import "tailwindcss";
+
+/*CODE ATTRIBUTION*/
+/*02*/
+/*CSS color-scheme Property for Light/Dark Mode*/
+/*Adapted from: MDN Web Docs. (2025). color-scheme. [online] Mozilla Developer Network.*/
+/*Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme*/
+/*Date Accessed: 10 October 2025*/
+
+/*CODE ATTRIBUTION*/
+/*03*/
+/*CSS Font Rendering Optimization*/
+/*Adapted from: MDN Web Docs. (2025). font-smooth. [online] Mozilla Developer Network.*/
+/*Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth*/
+/*Date Accessed: 10 October 2025*/
+
+/*CODE ATTRIBUTION*/
+/*04*/
+/*CSS prefers-color-scheme Media Query*/
+/*Adapted from: MDN Web Docs. (2025). prefers-color-scheme. [online] Mozilla Developer Network.*/
+/*Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme*/
+/*Date Accessed: 10 October 2025*/
+
+/*CODE ATTRIBUTION*/
+/*05*/
+/*CSS Transitions for Interactive Elements*/
+/*Adapted from: MDN Web Docs. (2025). transition. [online] Mozilla Developer Network.*/
+/*Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/transition*/
+/*Date Accessed: 10 October 2025*/
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}

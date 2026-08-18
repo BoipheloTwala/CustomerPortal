@@ -1,0 +1,21 @@
+# Cloudflare configuration for DDoS protection
+# This file configures Cloudflare settings for the frontend
+
+# Enable Cloudflare DDoS protection
+[security]
+  ddos_protection = true
+  waf = true
+  
+# Configure caching
+[cache]
+  cache_everything = true
+  edge_cache_ttl = 3600
+  
+# Configure HTTP headers
+[headers]
+  # Force HTTPS
+  [headers.values]
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"

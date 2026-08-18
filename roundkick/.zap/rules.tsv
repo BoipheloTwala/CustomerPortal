@@ -1,0 +1,52 @@
+# ZAP Rules Configuration
+# Format: PluginID	AlertThreshold	AttackThreshold
+# Use DEFAULT for default values
+
+# Cross Site Scripting
+40012	DEFAULT	DEFAULT
+40014	DEFAULT	DEFAULT
+40016	DEFAULT	DEFAULT
+40017	DEFAULT	DEFAULT
+
+# SQL Injection
+40018	DEFAULT	DEFAULT
+40019	DEFAULT	DEFAULT
+40020	DEFAULT	DEFAULT
+40021	DEFAULT	DEFAULT
+40022	DEFAULT	DEFAULT
+
+# Path Traversal
+6	DEFAULT	DEFAULT
+
+# Remote File Inclusion
+7	DEFAULT	DEFAULT
+
+# Source Code Disclosure
+42	DEFAULT	DEFAULT
+
+# Shell Shock
+10048	DEFAULT	DEFAULT
+
+# Remote OS Command Injection
+90020	DEFAULT	DEFAULT
+
+# Server Side Include
+90027	DEFAULT	DEFAULT
+
+# Server Side Code Injection
+90019	DEFAULT	DEFAULT
+
+# Expression Language Injection
+90022	DEFAULT	DEFAULT
+
+# XML External Entity Attack
+90023	DEFAULT	DEFAULT
+
+# Padding Oracle
+90024	DEFAULT	DEFAULT
+
+# HTTP Parameter Pollution
+20014	DEFAULT	DEFAULT
+
+# Heartbleed OpenSSL Vulnerability
+10034	DEFAULT	DEFAULT

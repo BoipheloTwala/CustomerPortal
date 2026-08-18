@@ -1,0 +1,58 @@
+config:
+  target: 'http://localhost:5000'
+  phases:
+    - duration: 60
+      arrivalRate: 10
+      name: 'Warm up phase'
+    - duration: 120
+      arrivalRate: 10
+      rampTo: 50
+      name: 'Ramp up load'
+    - duration: 60
+      arrivalRate: 50
+      name: 'Sustained load'
+  defaults:
+    headers:
+      Content-Type: 'application/json'
+
+scenarios:
+  - name: 'Health Check'
+    weight: 30
+    requests:
+      - get:
+          url: '/health'
+
+  - name: 'Invalid Login Attempts'
+    weight: 40
+    requests:
+      - post:
+          url: '/api/auth/login'
+          json:
+            email: 'nonexistent@example.com'
+            password: 'wrongpassword'
+          expect:
+            - statusCode: 401
+
+  - name: 'Registration Attempts'
+    weight: 20
+    requests:
+      - post:
+          url: '/api/auth/register'
+          json:
+            email: 'loadtest{{ $randomInt }}@example.com'
+            password: 'TestPass123!'
+            firstName: 'Load'
+            lastName: 'Test'
+          expect:
+            - statusCode: 201
+
+  - name: 'API Rate Limiting Test'
+    weight: 10
+    requests:
+      - post:
+          url: '/api/auth/login'
+          json:
+            email: 'test@example.com'
+            password: 'wrongpassword'
+          expect:
+            - statusCode: 401

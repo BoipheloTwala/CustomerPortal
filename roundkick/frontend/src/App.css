@@ -1,0 +1,131 @@
+/*CODE ATTRIBUTION*/
+/*01*/
+/*CSS Flexbox Layout*/
+/*Adapted from: MDN Web Docs. (2025). CSS Flexible Box Layout. [online] Mozilla Developer Network.*/
+/*Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout*/
+/*Date Accessed: 10 October 2025*/
+
+/*CODE ATTRIBUTION*/
+/*02*/
+/*CSS Backdrop Filter for Glassmorphism Effect*/
+/*Adapted from: MDN Web Docs. (2025). backdrop-filter. [online] Mozilla Developer Network.*/
+/*Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter*/
+/*Date Accessed: 10 October 2025*/
+
+/*CODE ATTRIBUTION*/
+/*03*/
+/*CSS Gradient Text Effects*/
+/*Adapted from: MDN Web Docs. (2025). linear-gradient(). [online] Mozilla Developer Network.*/
+/*Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient*/
+/*Date Accessed: 10 October 2025*/
+
+/*CODE ATTRIBUTION*/
+/*04*/
+/*CSS Media Queries for Responsive Design*/
+/*Adapted from: MDN Web Docs. (2025). Using media queries. [online] Mozilla Developer Network.*/
+/*Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries*/
+/*Date Accessed: 10 October 2025*/
+
+/*CODE ATTRIBUTION*/
+/*05*/
+/*CSS Transitions and Transforms*/
+/*Adapted from: MDN Web Docs. (2025). Using CSS transitions. [online] Mozilla Developer Network.*/
+/*Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions*/
+/*Date Accessed: 10 October 2025*/
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+  transform: scale(1.05);
+}
+
+.profile-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profile-description {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Light mode adjustments */
+@media (prefers-color-scheme: light) {
+  .profile-card {
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-picture {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-description {
+    color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .profile-card {
+    padding: 2rem;
+    margin: 1rem;
+  }
+
+  .profile-name {
+    font-size: 2rem;
+  }
+
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+}
